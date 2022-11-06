@@ -38,7 +38,7 @@ $(document).ready(function() {
          var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-       if(6.5>= inspect < 8.5){
+       if(6.5> inspect < 8.5){
              execute("pH of water is good");
          }
         if (inspectSecond < 5)
