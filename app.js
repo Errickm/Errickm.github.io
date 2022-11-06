@@ -4,13 +4,13 @@ $(document).ready(function() {
 
     // getUpdates();
         // GetDataSensor1();
-         GetDataSensor2();
+         //GetDataSensor2();
          GetData();
 
      // check for new updates
      setInterval('GetData()',30000);
     // setInterval('GetDataSensor1()',30000);
-     setInterval('GetDataSensor2()',30000);
+     //setInterval('GetDataSensor2()',30000);
 
  });
 
