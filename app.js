@@ -35,23 +35,23 @@ $(document).ready(function() {
          //crossDomain: true,
          success: function (data, textStatus, xhr) {
          var inspect = parseFloat(data.field1);
-         //var inspectSecond = parseFloat(data.field2);
+         var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-       if(inspect >= 6.5){
-             execute("pH of water is basic, poor water quality");
+       if(6.5>= inspect < 8.5){
+             execute("pH of water is good");
          }
-         else if (inspect < 6.5)
+        if (inspectSecond < 5)
          {
-             execute("pH of water is Acidic, poor water quality");
-         }/*
-         else if(6.5>= inspect <8.5 ){
-            execute("pH of water is neutral, good water quality");
-         }  */
+             execute("Turbidity of water is good");
+         }
+         else{
+            execute("Qaulity of water is poor");
+         } 
          }
         }
      });
- }
+ }/*
  function GetDataSensor2()
  {
      var url = 'https://api.thingspeak.com/channels/1916023/feed/last.json?callback=?';
@@ -80,11 +80,11 @@ $(document).ready(function() {
             else if (inspectSecond < 0)
             {
                 execute("Sensor 2 humidity is less than threshold of -20 degrees");
-            }*/
+            }
         }
     }
      });
- }
+ }*/
  /*function GetDataSensor3()
  {
      var url = 'https://api.thingspeak.com/channels/1738066/feed/last.json?callback=?';
