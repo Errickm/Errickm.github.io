@@ -8,7 +8,7 @@ $(document).ready(function() {
          GetData();
 
      // check for new updates
-     setInterval('GetData()',30000);
+     //setInterval('GetData()',30000);
      setInterval('GetDataSensor1()',30000);
      setInterval('GetDataSensor2()',30000);
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
      });
 
  }*/
- function GetData()
+ function GetDataSensor1()
  {
      var url = 'https://api.thingspeak.com/channels/1916023/feed/last.json?callback=?';
      $.ajax
