@@ -3,13 +3,13 @@ localStorage.setItem("ExecuteCheck","false");
 $(document).ready(function() {
 
     // getUpdates();
-         GetDataSensor1();
+        // GetDataSensor1();
          GetDataSensor2();
-        // GetData();
+         GetData();
 
      // check for new updates
-     //setInterval('GetData()',30000);
-     setInterval('GetDataSensor1()',30000);
+     setInterval('GetData()',30000);
+    // setInterval('GetDataSensor1()',30000);
      setInterval('GetDataSensor2()',30000);
 
  });
@@ -23,7 +23,7 @@ $(document).ready(function() {
      });
 
  }*/
- function GetDataSensor1()
+ function GetData()
  {
      var url = 'https://api.thingspeak.com/channels/1916023/feed/last.json?callback=?';
      $.ajax
@@ -38,16 +38,16 @@ $(document).ready(function() {
          //var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-       if(inspect >= 8.5){
+       if(inspect >= 6.5){
              execute("pH of water is basic, poor water quality");
          }
-         if (inspect < 6.5)
+         else if (inspect < 6.5)
          {
              execute("pH of water is Acidic, poor water quality");
-         }
+         }/*
          else if(6.5>= inspect <8.5 ){
             execute("pH of water is neutral, good water quality");
-         }  
+         }  */
          }
         }
      });
