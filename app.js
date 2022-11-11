@@ -26,7 +26,7 @@ $(document).ready(function() {
              execute("Turbidity of water is good");
          }
          else{
-            execute("Qaulity of water is poor");
+            execute("Quality of water is poor");
          } 
          }
         }
